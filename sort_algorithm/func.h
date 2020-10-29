@@ -3,14 +3,15 @@
 #include <sys/timeb.h>​
 #include <time.h>
 
+//for counting the number of key comparison
+long insertion_count;
 int merge_count;
-int insertion_count;
 int heap_sort_count;
 int quick_sort_count;
 
 int* generateRandomArray(int data[], int length, int range);
 void swap(int* aa, int* bb);
-void checkTime(void (*func)(int*, int), int array[], int length);
+float checkTime(void (*func)(int*, int), int array[], int length);
 
 void insertionSort(int array[], int length);
 
@@ -47,7 +48,7 @@ inline void quickSortV3(int array[], int length) {
 	quickSortFunc(partitionV3, array, 0, length - 1);
 }
 
-//랜덤하게 3개의 값을 뽑은 후 중간값을 pivot으로 결정
+//pick three random number, then select median value
 int partitionV4(int array[], int p, int r);
 inline void quickSortV4(int array[], int length) {
 	quickSortFunc(partitionV4, array, 0, length - 1);

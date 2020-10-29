@@ -52,16 +52,17 @@ int* generateRandomArray(int data[], int length, int range) {
 }
 
 
+//swap the value of an array
 void swap(int* aa, int* bb) {
 	int temp = *aa;
 	*aa = *bb;
 	*bb = temp;
 }
 
-// time check
-void checkTime(void (*func)(int*,int),int array[],int length) {
+//estimate time while the function is running
+float checkTime(void (*func)(int*,int),int array[],int length) {
 	clock_t start, end;
-	double times;
+	float times;
 
 	start = clock();
 	func(array,length);
@@ -69,13 +70,84 @@ void checkTime(void (*func)(int*,int),int array[],int length) {
 	times = (double)(end - start)/ CLOCKS_PER_SEC;
 	printf("실행시간 : %f sec\n", times);
 
+	return times;
+}
+
+
+void writefile(int length) {
+	//write outputfile
+	FILE* fp = NULL;
+	fopen_s(&fp, "C:\\Users\\gildo\\Develop\\sort_algorithm\\outputfile.txt", "w");
+	if (fp == NULL) {
+		fprintf(stderr, "Can not write file.\n");
+		return -1;
+	}
+	fprintf(fp, "Sort type             clock time       comparision\n");
+
+	int temp_arr[10000] = {0};
+	int resultarray[10000] = {0};
 	
+	*temp_arr = *generateRandomArray(temp_arr, length, length);
+
+	printf("original array is : \n");
+	for (int i = 0; i < length; i++) {
+		//4printf("%d: %d\n", i, temp_arr[i]);
+		resultarray[i] = temp_arr[i];
+	}
+
+	printf("\n");
+
+	
+
+
+	fprintf(fp, "Insertion Sort  %15f  ", checkTime(insertionSort, temp_arr, length));
+	fprintf(fp, "%15ld\n", insertion_count);
+
+	fprintf(fp, "Merge Sort      %15f  ", checkTime(mergeSort, temp_arr, length));
+	fprintf(fp, "%15d\n", merge_count);
+
+	for (int i = 0; i < length; i++) {
+		temp_arr[i] = resultarray[i];
+	}
+	fprintf(fp, "Heap Sort       %15f  ", checkTime(heapSort, temp_arr, length));
+	fprintf(fp, "%15d\n", heap_sort_count);
+
+	for (int i = 0; i < length; i++) {
+		temp_arr[i] = resultarray[i];
+	}
+	fprintf(fp, "Quick Sort V1   %15f  ", checkTime(quickSortV1, temp_arr, length));
+	fprintf(fp, "%15d\n", quick_sort_count);
+
+	for (int i = 0; i < length; i++) {
+		temp_arr[i] = resultarray[i];
+	}
+	quick_sort_count = 0;
+	fprintf(fp, "Quick Sort V2   %15f  ", checkTime(quickSortV2, temp_arr, length));
+	fprintf(fp, "%15d\n", quick_sort_count);
+
+	for (int i = 0; i < length; i++) {
+		temp_arr[i] = resultarray[i];
+	}
+	quick_sort_count = 0;
+	fprintf(fp, "Quick Sort V3   %15f  ", checkTime(quickSortV3, temp_arr, length));
+	fprintf(fp, "%15d\n", quick_sort_count);
+
+	for (int i = 0; i < length; i++) {
+		temp_arr[i] = resultarray[i];
+	}
+	quick_sort_count = 0;
+	fprintf(fp, "Quick Sort V4   %15f  ", checkTime(quickSortV4, temp_arr, length));
+	fprintf(fp, "%15d\n", quick_sort_count);
+
+	fclose(fp);
 }
 
 
 int main(){
-	int a[10240];
-	generateRandomArray(a, 10240,10240);
+
+	writefile(10000);
+
+	//generateRandomArray(a, 10240,10240);
 	//printf("original array : ");
 	for (int i = 0; i < 1024; i++) {
 		//printf("%d ", a[i]);
@@ -83,21 +155,25 @@ int main(){
 	//printf("<Insertion Sort>");
 	//checkTime(insertionSort,a,10240);
 	//printf("%d", insertion_count);
+
 	//printf("<Merge Sort>");
 	//checkTime(mergeSort, a, 1024);
 	//printf("%d", merge_count);
+
 	//printf("<Heap Sort>");
 	//checkTime(heapSort, a, 10240);
 
 	//printf("<Quick Sort version1>");
 	//checkTime(quickSortV1, a, 10240);
-	printf("%d", quick_sort_count);
+	//printf("%d", quick_sort_count);
+
 	//printf("<Quick Sort version2>");
 	//checkTime(quickSortV2, a, 10240);
 
 	//printf("<Quick Sort version3>");
-	checkTime(quickSortV3, a, 10240);
-	printf("%d", quick_sort_count);
+	//checkTime(quickSortV3, a, 10240);
+	//printf("%d", quick_sort_count);
+
 	//printf("<Quick Sort version4>");
 	//checkTime(quickSortV4, a, 10240);
 

@@ -1,0 +1,8 @@
+Sort type             clock time       comparision
+Insertion Sort         0.094000         27102007
+Merge Sort             0.028000           143615
+Heap Sort              0.010000           282163
+Quick Sort V1          0.008000           151873
+Quick Sort V2          0.025000           159330
+Quick Sort V3          0.006000           110211
+Quick Sort V4          0.010000            77605

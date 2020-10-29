@@ -2,7 +2,7 @@ merge_count = 0;
 
 void merge(int array[], int p, int q, int r) {
 	int i, j, k;
-	int resultarray[102400] = { 0 };
+	int resultarray[10000] = { 0 };
 	i = p;
 	j = q + 1;
 	k = p;

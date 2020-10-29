@@ -15,7 +15,7 @@ void quickSortFunc(int (*partition)(int*,int,int),int array[], int p, int r) {
 }
 
 
-
+//last element as pivot
 int partitionV1(int array[], int p, int r) {
 	int pivot = array[r];
 	int i;
@@ -32,11 +32,11 @@ int partitionV1(int array[], int p, int r) {
 }
 
 
-
+//random number as pivot
 int partitionV2(int array[], int p, int r) {
 	srand(time(NULL));
-	//int num = p + (rand() % (r - p + 1));    //배열 크기보다 작게 랜덤피벗 설정
-	int num = generateRandomNum(r-p+1);		//배열 크기보다 작게 랜덤피벗 설정
+	//int num = p + (rand() % (r - p + 1));    //배열 크기보다 작게 랜덤피벗 설정(use built in function)
+	int num = generateRandomNum(r-p+1);		//배열 크기보다 작게 랜덤피벗 설정(use generateRandNum)
 	//printf("%d\n",num);
 	swap(&array[num], &array[r]);
 	int pivot = array[r];
@@ -55,6 +55,7 @@ int partitionV2(int array[], int p, int r) {
 	return q;
 }
 
+//median of three partitioning as pivot
 int partitionV3(int array[], int p, int r) {
 	int mid = p + (r - p) / 2;
 	int i;
@@ -91,7 +92,7 @@ int partitionV3(int array[], int p, int r) {
 
 }
 
-
+//pick three random number, then select median value
 int partitionV4(int array[], int p, int r) {
 	int i;
 	int q = p;
@@ -101,6 +102,7 @@ int partitionV4(int array[], int p, int r) {
 	int num1 = p + (rand() % (r - p + 1));
 	int num2 = p + (rand() % (r - p + 1));
 	int num3 = p + (rand() % (r - p + 1));
+	//printf("pivot : %d ,%d  ,%d  \n",num1,num2,num3);
 
 	//랜덤하게 뽑은 세 배열값의 중간값을 피벗으로 결정
 	if (array[num1] > array[num2]) {
