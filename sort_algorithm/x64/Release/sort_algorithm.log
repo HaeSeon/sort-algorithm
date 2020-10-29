@@ -1,0 +1,9 @@
+﻿  heap-sort.c
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\heap-sort.c(15,7): warning C4013: 'swap' undefined; assuming extern returning int
+  insertion-sort.c
+  merge-sort.c
+  sort-algorithm.c
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\func.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort-algorithm.c(16,27): warning C4311: 'type cast': pointer truncation from 'char *' to 'int'
+sort-algorithm.obj : error LNK2001: unresolved external symbol quickSortFuncV1
+C:\Users\gildo\Develop\sort_algorithm\x64\Release\sort_algorithm.exe : fatal error LNK1120: 1 unresolved externals

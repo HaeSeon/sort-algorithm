@@ -15,8 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sort_algorithm.c">
+    <ClCompile Include="insertion-sort.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sort-algorithm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="merge-sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="heap-sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quick-sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sort_algorithm.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

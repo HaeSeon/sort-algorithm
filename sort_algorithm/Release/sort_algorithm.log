@@ -1,0 +1,8 @@
+﻿  heap-sort.c
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\heap-sort.c(15,7): warning C4013: 'swap' undefined; assuming extern returning int
+  insertion-sort.c
+  merge-sort.c
+  sort-algorithm.c
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\func.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+sort-algorithm.obj : error LNK2001: unresolved external symbol _quickSortFuncV1
+C:\Users\gildo\Develop\sort_algorithm\Release\sort_algorithm.exe : fatal error LNK1120: 1 unresolved externals

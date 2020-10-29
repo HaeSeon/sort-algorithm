@@ -147,7 +147,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sort_algorithm.c" />
+    <ClCompile Include="heap-sort.c" />
+    <ClCompile Include="insertion-sort.c" />
+    <ClCompile Include="merge-sort.c" />
+    <ClCompile Include="quick-sort.c" />
+    <ClCompile Include="sort-algorithm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="func.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sort_algorithm.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

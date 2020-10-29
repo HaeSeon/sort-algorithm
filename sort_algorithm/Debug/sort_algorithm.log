@@ -1,4 +1,3 @@
-﻿  sort_algorithm.c
-C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort_algorithm.c(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort_algorithm.c(36,13): warning C4047: 'return': 'int' differs in levels of indirection from 'int *'
+﻿  sort-algorithm.c
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\func.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   sort_algorithm.vcxproj -> C:\Users\gildo\Develop\sort_algorithm\Debug\sort_algorithm.exe
