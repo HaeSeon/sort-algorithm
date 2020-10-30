@@ -1,7 +1,5 @@
-﻿  merge-sort.c
-  sort-algorithm.c
+﻿  sort-algorithm.c
 C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\func.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort-algorithm.c(70,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort-algorithm.c(83,12): warning C4098: 'writefile': 'void' function returning a value
-  Generating Code...
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort-algorithm.c(69,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\gildo\Develop\sort_algorithm\sort_algorithm\sort-algorithm.c(82,12): warning C4098: 'writefile': 'void' function returning a value
   sort_algorithm.vcxproj -> C:\Users\gildo\Develop\sort_algorithm\Debug\sort_algorithm.exe

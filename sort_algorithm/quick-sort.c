@@ -34,9 +34,9 @@ int partitionV1(int array[], int p, int r) {
 
 //random number as pivot
 int partitionV2(int array[], int p, int r) {
-	srand(time(NULL));
+	//srand(time(NULL));
 	//int num = p + (rand() % (r - p + 1));    //배열 크기보다 작게 랜덤피벗 설정(use built in function)
-	int num = generateRandomNum(r-p+1);		//배열 크기보다 작게 랜덤피벗 설정(use generateRandNum)
+	int num = p+generateRandomNum(r-p+1);		//배열 크기보다 작게 랜덤피벗 설정(use generateRandNum)
 	//printf("%d\n",num);
 	swap(&array[num], &array[r]);
 	int pivot = array[r];

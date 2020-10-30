@@ -2,11 +2,10 @@ merge_count = 0;
 
 void merge(int array[], int p, int q, int r) {
 	int i, j, k;
-	int resultarray[10000] = { 0 };
+	int resultarray[1024] = { 0 };
 	i = p;
 	j = q + 1;
 	k = p;
-
 	while (i <= q && j <= r) {
 		if (array[i] < array[j]) {
 			resultarray[k] = array[i];
